@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LogedInUser" representedClassName="LogedInUser" syncable="YES" codeGenerationType="class">
+        <attribute name="logedInUserEndSessionDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logedInUserId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logedInUserName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logedInUserPass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logedInUserStartSessionDate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="userEndSessionDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userStartSessionDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userToRecord" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserRecords" syncable="YES"/>
+    </entity>
+    <entity name="UserMapLocation" representedClassName="UserMapLocation" syncable="YES" codeGenerationType="class">
+        <attribute name="userLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="UserRecords" representedClassName="UserRecords" syncable="YES" codeGenerationType="class">
+        <attribute name="recordEndTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="recordId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordStartTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="recordToLocation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserMapLocation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LogedInUser" positionX="-441" positionY="-142" width="128" height="120"/>
+        <element name="User" positionX="-126" positionY="-207" width="128" height="135"/>
+        <element name="UserMapLocation" positionX="-108" positionY="225" width="128" height="75"/>
+        <element name="UserRecords" positionX="-110" positionY="18" width="128" height="120"/>
+    </elements>
 </model>
