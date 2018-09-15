@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -181,13 +182,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pera Peric" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-wk-FWG">
-                                                            <rect key="frame" x="8" y="10" width="78" height="20.5"/>
+                                                            <rect key="frame" x="8" y="10" width="143" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.37647058823529411" green="0.52549019607843139" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24/7/17 14:22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uep-1x-uRR">
-                                                            <rect key="frame" x="134" y="10" width="104" height="20.5"/>
+                                                            <rect key="frame" x="199" y="10" width="120" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.37647058823529411" green="0.52549019607843139" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -204,7 +205,9 @@
                                                         <constraint firstAttribute="bottom" secondItem="HoA-cv-2w3" secondAttribute="bottom" id="4Jv-Va-rC1"/>
                                                         <constraint firstItem="HoA-cv-2w3" firstAttribute="leading" secondItem="dyj-xU-We4" secondAttribute="leading" id="4YL-zd-pwx"/>
                                                         <constraint firstItem="cY3-wk-FWG" firstAttribute="leading" secondItem="dyj-xU-We4" secondAttribute="leading" constant="8" id="Csv-4S-br1"/>
+                                                        <constraint firstItem="uep-1x-uRR" firstAttribute="width" secondItem="dyj-xU-We4" secondAttribute="width" multiplier="120:327" id="ORP-Hd-nng"/>
                                                         <constraint firstItem="uep-1x-uRR" firstAttribute="top" secondItem="dyj-xU-We4" secondAttribute="top" constant="10" id="QR6-Ff-YuF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="uep-1x-uRR" secondAttribute="trailing" constant="8" id="Qnc-XJ-TaA"/>
                                                         <constraint firstItem="cY3-wk-FWG" firstAttribute="top" secondItem="dyj-xU-We4" secondAttribute="top" constant="10" id="Wgf-3Z-SzH"/>
                                                         <constraint firstItem="HoA-cv-2w3" firstAttribute="top" secondItem="dyj-xU-We4" secondAttribute="top" id="ahO-Jt-JCA"/>
                                                         <constraint firstAttribute="height" constant="50" id="bEy-7y-aEf"/>
@@ -267,7 +270,9 @@
                                         </visualEffectView>
                                     </subviews>
                                 </view>
-                                <blurEffect style="light"/>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.37647058823529411" green="0.52549019607843139" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -664,12 +669,26 @@
                                     <action selector="ShowInfoVC:" destination="0gz-Cf-UMh" eventType="touchUpInside" id="UXO-cq-Y4p"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16l-iC-Nei">
+                                <rect key="frame" x="77" y="223" width="220" height="220"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="16l-iC-Nei" secondAttribute="height" multiplier="1:1" id="UEL-he-xGP"/>
+                                    <constraint firstAttribute="height" constant="220" id="nU6-Kj-fIq"/>
+                                    <constraint firstItem="16l-iC-Nei" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="3Fn-7U-AIa"/>
+                                    <constraint firstItem="16l-iC-Nei" firstAttribute="centerY" secondItem="X4v-yp-4xt" secondAttribute="centerY" id="tAu-FZ-JSR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="M43-uE-kB9" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="E7H-jO-lTl"/>
                             <constraint firstItem="f6t-iz-DrQ" firstAttribute="top" secondItem="M43-uE-kB9" secondAttribute="bottom" constant="20" id="M6F-O1-e4Q"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KI6-Xy-Eug" appends="YES" id="9lv-GG-zzv"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="welcome" id="IFd-s4-tt1">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="ZHJ-2G-HKp">
@@ -680,9 +699,18 @@
                     </navigationItem>
                     <connections>
                         <segue destination="zs0-xn-hRr" kind="show" identifier="infoSegue" id="ffA-6B-Da1"/>
+                        <outlet property="blackView" destination="16l-iC-Nei" id="zyh-KC-7Fp"/>
+                    </connections>
+                    <connections>
+                        <outlet property="blackView" destination="16l-iC-Nei" id="zyh-KC-7Fp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEs-24-mw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="KI6-Xy-Eug">
+                    <connections>
+                        <action selector="rotationGesture:" destination="0gz-Cf-UMh" id="uOZ-Qv-dEh"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4663.1999999999998" y="133.5832083958021"/>
         </scene>
