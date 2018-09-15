@@ -12,8 +12,13 @@ class MainUserScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupCALayer()
+    }
+    
+    @IBOutlet weak var blackView: UIView!
+    
+    var blackViewLayer : CALayer {
+        return blackView.layer
     }
     
     @IBAction func logOutAction(_ sender: Any) {
@@ -24,7 +29,24 @@ class MainUserScreenViewController: UIViewController {
         }
     }
 
+    func setupCALayer() {
+        
+        blackViewLayer.backgroundColor = UIColor.red.cgColor
+        blackViewLayer.borderWidth = 60
+        blackViewLayer.borderColor = UIColor.blue.cgColor
+        blackViewLayer.cornerRadius = 60
+        
+        blackViewLayer.contents = UIImage(named: "moon")?.cgImage
+        blackViewLayer.contentsGravity = kCAGravityCenter
+        blackViewLayer.contentsScale = 3.0
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    @IBAction func rotationGesture(_ sender: Any) {
+        print("rotate me bitch")
     }
 }
