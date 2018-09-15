@@ -46,6 +46,7 @@ class MainUserScreenViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+<<<<<<< HEAD
     
     @IBAction func ShowInfoVC(_ sender: Any) {
         self.performSegue(withIdentifier: "infoSegue", sender: self)
@@ -57,6 +58,8 @@ class MainUserScreenViewController: UIViewController {
         }
     }
     
+=======
+>>>>>>> a5e04d8c6fe3371fe23815c6b202a71247d55ef5
     @IBAction func rotationGesture(_ sender: Any) {
         print("rotate me bitch")
     }

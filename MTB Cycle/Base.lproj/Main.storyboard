@@ -658,6 +658,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M43-uE-kB9">
                                 <rect key="frame" x="117" y="603" width="140" height="44"/>
                                 <constraints>
@@ -671,6 +672,8 @@
                             </button>
                         </subviews>
                         <subviews>
+=======
+>>>>>>> a5e04d8c6fe3371fe23815c6b202a71247d55ef5
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16l-iC-Nei">
                                 <rect key="frame" x="77" y="223" width="220" height="220"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -681,10 +684,13 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<<<<<<< HEAD
                         <constraints>
                             <constraint firstItem="M43-uE-kB9" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="E7H-jO-lTl"/>
                             <constraint firstItem="f6t-iz-DrQ" firstAttribute="top" secondItem="M43-uE-kB9" secondAttribute="bottom" constant="20" id="M6F-O1-e4Q"/>
                         </constraints>
+=======
+>>>>>>> a5e04d8c6fe3371fe23815c6b202a71247d55ef5
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="16l-iC-Nei" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="3Fn-7U-AIa"/>
@@ -702,9 +708,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+<<<<<<< HEAD
                         <segue destination="zs0-xn-hRr" kind="show" identifier="infoSegue" id="ffA-6B-Da1"/>
                     </connections>
                     <connections>
+=======
+>>>>>>> a5e04d8c6fe3371fe23815c6b202a71247d55ef5
                         <outlet property="blackView" destination="16l-iC-Nei" id="zyh-KC-7Fp"/>
                     </connections>
                 </viewController>
