@@ -27,4 +27,15 @@ class MainUserScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
+    
+    @IBAction func ShowInfoVC(_ sender: Any) {
+        self.performSegue(withIdentifier: "infoSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "infoSegue" {
+            let vc : InfoViewController = segue.destination as! InfoViewController
+        }
+    }
 }

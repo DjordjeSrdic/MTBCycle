@@ -25,6 +25,8 @@
 		647322E91F4451C900BAE90E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647322E81F4451C900BAE90E /* CoreDataManager.swift */; };
 		647322EC1F45C96800BAE90E /* MainUserScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647322EB1F45C96800BAE90E /* MainUserScreenViewController.swift */; };
 		647322EF1F46E71D00BAE90E /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647322EE1F46E71D00BAE90E /* Animations.swift */; };
+		B188C614214DA27800D98745 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B188C613214DA27800D98745 /* Info.storyboard */; };
+		B190E533214DA1480091DD8C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190E532214DA1480091DD8C /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		647322E81F4451C900BAE90E /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		647322EB1F45C96800BAE90E /* MainUserScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainUserScreenViewController.swift; sourceTree = "<group>"; };
 		647322EE1F46E71D00BAE90E /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		B188C613214DA27800D98745 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		B190E532214DA1480091DD8C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 				647322991F39B09E00BAE90E /* AppDelegate.swift */,
 				6473229B1F39B09E00BAE90E /* ViewController.swift */,
 				6473229D1F39B09E00BAE90E /* Main.storyboard */,
+				B188C613214DA27800D98745 /* Info.storyboard */,
 				647322A31F39B09E00BAE90E /* Assets.xcassets */,
 				647322A51F39B09E00BAE90E /* LaunchScreen.storyboard */,
 				647322A81F39B09E00BAE90E /* Info.plist */,
@@ -197,6 +202,7 @@
 			children = (
 				647322CA1F39B27700BAE90E /* LogInVC */,
 				647322EA1F45C95000BAE90E /* MainScreenVC */,
+				B190E531214DA1270091DD8C /* InfoVC */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +258,14 @@
 				647322EE1F46E71D00BAE90E /* Animations.swift */,
 			);
 			name = Animations;
+			sourceTree = "<group>";
+		};
+		B190E531214DA1270091DD8C /* InfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				B190E532214DA1480091DD8C /* InfoViewController.swift */,
+			);
+			name = InfoVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +378,7 @@
 			files = (
 				647322A71F39B09E00BAE90E /* LaunchScreen.storyboard in Resources */,
 				647322A41F39B09E00BAE90E /* Assets.xcassets in Resources */,
+				B188C614214DA27800D98745 /* Info.storyboard in Resources */,
 				6473229F1F39B09E00BAE90E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +414,7 @@
 				647322EF1F46E71D00BAE90E /* Animations.swift in Sources */,
 				6473229C1F39B09E00BAE90E /* ViewController.swift in Sources */,
 				64354A031F4DA782000B380F /* ErrorHandler.swift in Sources */,
+				B190E533214DA1480091DD8C /* InfoViewController.swift in Sources */,
 				647322E91F4451C900BAE90E /* CoreDataManager.swift in Sources */,
 				6473229A1F39B09E00BAE90E /* AppDelegate.swift in Sources */,
 				64354A091F542721000B380F /* TVProtocols.swift in Sources */,

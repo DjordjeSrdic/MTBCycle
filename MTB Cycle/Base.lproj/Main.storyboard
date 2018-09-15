@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -652,7 +652,24 @@
                     <view key="view" contentMode="scaleToFill" id="X4v-yp-4xt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M43-uE-kB9">
+                                <rect key="frame" x="117" y="603" width="140" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9RW-B1-deA"/>
+                                    <constraint firstAttribute="width" constant="140" id="tUR-kC-kFH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="ShowInfoVC:" destination="0gz-Cf-UMh" eventType="touchUpInside" id="UXO-cq-Y4p"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M43-uE-kB9" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="E7H-jO-lTl"/>
+                            <constraint firstItem="f6t-iz-DrQ" firstAttribute="top" secondItem="M43-uE-kB9" secondAttribute="bottom" constant="20" id="M6F-O1-e4Q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="welcome" id="IFd-s4-tt1">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="ZHJ-2G-HKp">
@@ -661,10 +678,21 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="zs0-xn-hRr" kind="show" identifier="infoSegue" id="ffA-6B-Da1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEs-24-mw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4663.1999999999998" y="133.5832083958021"/>
+        </scene>
+        <!--InfoVC-->
+        <scene sceneID="med-kS-AC8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Info" referencedIdentifier="InfoVC" id="zs0-xn-hRr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEW-rZ-0lB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5414" y="156"/>
         </scene>
         <!--Item-->
         <scene sceneID="kg1-R5-3FZ">
@@ -673,7 +701,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="PMB-v5-SYL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VlP-P9-1oO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
