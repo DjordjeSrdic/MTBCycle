@@ -278,12 +278,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate, ErrorHandlerPr
     
     func submit() {
         passTextField.resignFirstResponder()
-        guard let name = userNameTextField.text, (userNameTextField.text?.characters.count)! > 0 else {
+        guard let name = userNameTextField.text, (userNameTextField.text?.count)! > 0 else {
             createError(errorName: "Invalid Credentials", errorCodeNumber: 3, errorReason: "Usernama field is empty")
             return
         }
         
-        guard let password = passTextField.text, (passTextField.text?.characters.count)! > 0 else {
+        guard let password = passTextField.text, (passTextField.text?.count)! > 0 else {
             createError(errorName: "Invalid Credentials", errorCodeNumber: 3, errorReason: "Password field is empty")
             return
         }
@@ -345,8 +345,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate, ErrorHandlerPr
             })
             
         } else {
-            if (userNameTextField.text!.characters.count > 0 && passTextField.text!.characters.count > 0) {
-                print("user je uneo credentials, odradi login")
+            if
+                let userName = userNameTextField.text,
+                userName.count > 0,
+                let pass = passTextField.text,
+                pass.count > 0 {
+                
+                    print("user je uneo credentials, odradi login")
+            
             } else {
                 logInButtonAnimation(
                         animation: {
