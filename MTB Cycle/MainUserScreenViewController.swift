@@ -56,7 +56,7 @@ class MainUserScreenViewController: UIViewController {
             let vc : InfoViewController = segue.destination as! InfoViewController
         }
     }
-        
+
     @IBAction func rotationGesture(_ sender: Any) {
         print("rotate me bitch")
     }
