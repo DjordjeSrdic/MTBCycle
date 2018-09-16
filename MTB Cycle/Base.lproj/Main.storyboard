@@ -675,16 +675,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="16l-iC-Nei" secondAttribute="height" multiplier="1:1" id="UEL-he-xGP"/>
                                     <constraint firstAttribute="height" constant="220" id="nU6-Kj-fIq"/>
-                                    <constraint firstItem="16l-iC-Nei" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="3Fn-7U-AIa"/>
-                                    <constraint firstItem="16l-iC-Nei" firstAttribute="centerY" secondItem="X4v-yp-4xt" secondAttribute="centerY" id="tAu-FZ-JSR"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="16l-iC-Nei" firstAttribute="centerY" secondItem="X4v-yp-4xt" secondAttribute="centerY" id="4Cn-F6-7c5"/>
                             <constraint firstItem="M43-uE-kB9" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="E7H-jO-lTl"/>
                             <constraint firstItem="f6t-iz-DrQ" firstAttribute="top" secondItem="M43-uE-kB9" secondAttribute="bottom" constant="20" id="M6F-O1-e4Q"/>
+                            <constraint firstItem="16l-iC-Nei" firstAttribute="centerX" secondItem="X4v-yp-4xt" secondAttribute="centerX" id="lka-hm-9XM"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="KI6-Xy-Eug" appends="YES" id="9lv-GG-zzv"/>
@@ -698,11 +698,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="blackView" destination="16l-iC-Nei" id="zyh-KC-7Fp"/>
                         <segue destination="zs0-xn-hRr" kind="show" identifier="infoSegue" id="ffA-6B-Da1"/>
-                        <outlet property="blackView" destination="16l-iC-Nei" id="zyh-KC-7Fp"/>
-                    </connections>
-                    <connections>
-                        <outlet property="blackView" destination="16l-iC-Nei" id="zyh-KC-7Fp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEs-24-mw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
